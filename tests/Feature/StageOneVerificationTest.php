@@ -42,6 +42,8 @@ class StageOneVerificationTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertSee('MAS PENDI');
+        $response->assertSee('Kembali ke Landing Page Awal');
+        $response->assertSee('Masuk Portal Pegawai');
     }
 
     /**

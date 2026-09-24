@@ -42,6 +42,10 @@ class AdminPanelProvider extends PanelProvider
                 AccountWidget::class,
                 FilamentInfoWidget::class,
             ])
+            ->renderHook(
+                \Filament\View\PanelsRenderHook::AUTH_LOGIN_FORM_AFTER,
+                fn () => view('filament.components.back-to-home-button'),
+            )
             ->navigationItems([
                 \Filament\Navigation\NavigationItem::make('Kembali ke Portal Pegawai')
                     ->url('/portal')
