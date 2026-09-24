@@ -25,34 +25,51 @@
         border: 1px solid rgba(226, 232, 240, 0.95);
         box-shadow: 0 12px 30px -4px rgba(2, 132, 199, 0.1), 0 4px 12px -2px rgba(15, 23, 42, 0.05);
         border-radius: 1.5rem !important;
-        padding: 2.25rem 2rem !important;
+        padding: 2.5rem 2rem !important;
     }
 
     .dark .fi-simple-main {
-        background-color: rgba(15, 23, 42, 0.9);
+        background-color: rgba(15, 23, 42, 0.95);
         backdrop-filter: blur(12px);
         border-color: rgba(51, 65, 85, 0.85);
         box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
     }
 
-    /* Header & Heading Styling */
+    /* Header & Logo Spacing to strictly prevent any overlapping */
     .fi-simple-header {
-        margin-bottom: 1.5rem !important;
+        margin-bottom: 2rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .fi-simple-header .fi-logo {
+        height: auto !important;
+        min-height: 44px !important;
+        max-height: none !important;
+        margin-bottom: 1.25rem !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        overflow: visible !important;
     }
 
     .fi-simple-header-heading {
-        font-size: 1.35rem !important;
+        font-size: 1.25rem !important;
         font-weight: 800 !important;
         letter-spacing: -0.02em !important;
         color: #0f172a !important;
-        margin-top: 0.5rem !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        line-height: 1.4 !important;
     }
 
     .dark .fi-simple-header-heading {
         color: #f8fafc !important;
     }
 
-    /* Submit Button Hover polish */
+    /* Submit Button styling */
     .fi-btn.fi-color-primary {
         font-weight: 700 !important;
         letter-spacing: 0.01em !important;
