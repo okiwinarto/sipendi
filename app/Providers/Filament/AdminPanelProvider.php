@@ -29,6 +29,8 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->brandName('MAS PENDI — RSUD Sidawangi')
+            ->brandLogo(fn () => view('filament.components.brand-logo'))
+            ->brandLogoHeight('3.2rem')
             ->colors([
                 'primary' => Color::Sky,
             ])
@@ -42,6 +44,14 @@ class AdminPanelProvider extends PanelProvider
                 AccountWidget::class,
                 FilamentInfoWidget::class,
             ])
+            ->renderHook(
+                \Filament\View\PanelsRenderHook::HEAD_END,
+                fn () => view('filament.components.login-styles'),
+            )
+            ->renderHook(
+                \Filament\View\PanelsRenderHook::AUTH_LOGIN_FORM_BEFORE,
+                fn () => view('filament.components.login-header-badge'),
+            )
             ->renderHook(
                 \Filament\View\PanelsRenderHook::AUTH_LOGIN_FORM_AFTER,
                 fn () => view('filament.components.back-to-home-button'),
