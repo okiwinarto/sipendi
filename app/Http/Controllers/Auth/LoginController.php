@@ -50,6 +50,7 @@ class LoginController extends Controller
     {
         Auth::logout();
 
+        $request->session()->forget('url.intended');
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
@@ -61,6 +62,18 @@ class LoginController extends Controller
      */
     protected function authenticatedRedirect($user)
     {
+        $intended = session()->get('url.intended');
+
+        // Validasi url.intended: Jika tersimpan URL yang mengarah ke /admin,
+        // namun pengguna yang login TIDAK memiliki izin akses ke panel admin,
+        // hapus intended URL tersebut agar pengguna tidak diarahkan ke /admin (yang memicu 403).
+        if ($intended && str_contains($intended, '/admin')) {
+            $panel = \Filament\Facades\Filament::getCurrentOrDefaultPanel();
+            if (! $user->canAccessPanel($panel)) {
+                session()->forget('url.intended');
+            }
+        }
+
         if ($user->hasRole('admin_it')) {
             return redirect()->intended('/admin');
         }
