@@ -1,4 +1,4 @@
-# MAS PENDI — Sistem Peminjaman Kendaraan Dinas RSUD Sidawangi
+# MAS PENDI — Manajemen Aset dan Peminjaman Kendaraan Dinas RSUD Sidawangi
 
 <p align="center">
   <img src="https://img.shields.io/badge/Laravel-13.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel 13" />
