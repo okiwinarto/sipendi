@@ -47,3 +47,9 @@ Route::middleware(['auth'])->prefix('portal')->name('portal.')->group(function (
     })->name('notifications.markAllAsRead');
 });
 
+// Easter Egg: Ruang Rahasia "Hantu Laut" Tim IT RSUD Sidawangi
+Route::get('/secret', function () {
+    return view('secret');
+})->name('secret');
+
+

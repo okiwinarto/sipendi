@@ -39,6 +39,11 @@ class StageEightUATVerificationTest extends TestCase
 
         $this->unitKerja = $this->pemohonUser->unitKerja ?? UnitKerja::firstOrFail();
         $this->vehicle = Vehicle::where('status', 'tersedia')->firstOrFail();
+        $this->vehicle->update([
+            'status' => 'tersedia',
+            'odometer_terakhir' => 42500,
+        ]);
+        $this->vehicle->refresh();
         $this->driver = Driver::where('status', 'aktif')->firstOrFail();
 
         // Bersihkan data tes Tahap 8

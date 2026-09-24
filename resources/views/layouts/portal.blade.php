@@ -539,7 +539,7 @@
                     <ul class="space-y-1.5 text-xs text-slate-400">
                         <li><strong class="text-slate-300">Versi:</strong> 1.0 (Fase 1 Non-Ambulans)</li>
                         <li><strong class="text-slate-300">Pengelola Pool:</strong> H. Suhendar (Garasi Utama)</li>
-                        <li><strong class="text-slate-300">Dukungan Teknis:</strong> Tim IT RSUD Sidawangi</li>
+                        <li><strong class="text-slate-300">Dukungan Teknis:</strong> <span class="easter-egg-trigger cursor-pointer select-none hover:text-cyan-400 transition-colors inline-flex items-center gap-1 group" title="[Classified] Klik untuk otorisasi">Tim IT RSUD Sidawangi <span class="text-[10px] opacity-0 group-hover:opacity-100 transition-opacity text-cyan-400">⚡</span></span></li>
                         <li><strong class="text-slate-300">Jam Operasional Pool:</strong> 24 Jam (Siaga Dinas)</li>
                     </ul>
                 </div>
@@ -551,6 +551,7 @@
         </div>
     </footer>
 
+    @include('components.easter-egg-modal')
     @livewireScripts
 </body>
 </html>
