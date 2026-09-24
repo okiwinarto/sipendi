@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/badge/Filament-v3%2Fv4-F59E0B?style=for-the-badge&logo=filament&logoColor=white" alt="Filament" />
   <img src="https://img.shields.io/badge/Livewire-3.x-FB70A9?style=for-the-badge&logo=livewire&logoColor=white" alt="Livewire 3" />
   <img src="https://img.shields.io/badge/TailwindCSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-  <img src="https://img.shields.io/badge/Tests-69%20Passed%20(100%25)-success?style=for-the-badge&logo=php&logoColor=white" alt="Tests Passed" />
+  <img src="https://img.shields.io/badge/Tests-73%20Passed%20(100%25)-success?style=for-the-badge&logo=php&logoColor=white" alt="Tests Passed" />
 </p>
 
 ---
